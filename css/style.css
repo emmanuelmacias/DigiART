@@ -1,0 +1,584 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins'; 
+    scroll-behavior: smooth;
+    animation-delay: 2s;
+}
+
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+} 
+
+a{
+    text-decoration: none;
+}
+
+header, nav{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    z-index: 10000;
+    background-color: #1F1F46;
+}
+
+header .logo{
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li{
+    list-style: none;
+    margin-left: 20px;
+}
+
+header ul li a{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: white;
+    border-radius: 20px;
+}
+
+header ul li a:hover{
+    background: white;
+    color:#1F1F46;
+
+}
+
+/* nav{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    z-index: 10000;
+    background-color: #1F1F46;
+} */
+
+/* BARRA DE MENU */
+
+nav .logo{
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li{
+    list-style: none;
+    margin-left: 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: white;
+    border-radius: 20px;
+}
+
+nav ul li a:hover{
+    background: white;
+    color:#1F1F46;
+
+}
+
+/* ICONOS REDES SOCIALES */
+.social-icon
+{
+    font-size: 20px;
+    color: white; 
+    text-decoration: none;
+}
+.social-icon-instagram 
+{
+    font-size: 20px;
+    color: white; 
+    text-decoration: none;
+    
+}
+.social-icon-facebook 
+{
+    font-size: 20px;
+    color: white; 
+    text-decoration: none;
+    
+}
+.social-icon-twitter
+{
+    font-size: 20px;
+    color: white; 
+    text-decoration: none;
+    
+}
+.social-icon-instagram:hover
+{
+    font-size: 20px;
+    color: #e1306c; 
+    text-decoration: none;
+}
+.social-icon-facebook:hover
+{
+    font-size: 20px;
+    color: #3b5998; 
+    text-decoration: none;
+}
+.social-icon-twitter:hover
+{
+    font-size: 20px;
+    color: #00ACED; 
+    text-decoration: none;
+}
+
+
+/* IMAGEN PRINCIPAL CON BOTON A #explorar */
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top,#1F1F46,transparent);
+    z-index: 1000;
+}
+
+section img{
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+section img#luna{
+    mix-blend-mode: screen;
+}
+
+section img#front{
+    z-index: 10;
+}
+
+#titulo{
+    position: absolute;
+    color: white;
+    white-space: nowrap;
+    font-size: 7.5em;
+    z-index: 9;
+}
+
+#btn
+{
+    text-decoration: none;  
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #E63946;;
+    color: white;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(100px);
+    
+}
+
+/* #EXPLORAR - #NOSOTROS - #NFT */
+
+.explorar, .nosotros, .nft{
+    display: grid;
+    position: relative;
+    min-height: 100vh;
+/* ACA ESTA LA SOLCION AL ESPACIO DESPUES DEL SCROLL */
+    padding: 8rem;
+    background: linear-gradient(to right, #1F1F46, #212E74 ); 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 1rem; 
+    
+     
+}
+
+.explorar, .nft{
+    grid-template-areas: 
+    "info__texto info__img";
+}
+
+.nosotros{
+    grid-template-areas: 
+    "info__img info__texto";
+}
+
+.info__texto { 
+    grid-area: info__texto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+
+}
+.info__img { 
+    grid-area: info__img;
+    display: flex;
+    justify-content: center;
+
+}
+
+.explorar img{
+  width: 30em;
+}
+
+.explorar h3{
+
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.nosotros h3{
+
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.nft h3{
+
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+
+.explorar, .nosotros, .nft p{
+
+    font-size: 1rem;
+    color: white;
+}
+
+/* PORTFOLIO */
+
+.portfolio{
+    width: 100%;
+    min-height: 100vh;
+}
+
+.portfolio__table {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+    padding: 50px;
+    
+    }
+    
+.nft__card__.uno{ 
+    grid-area: 1 / 1 / 2 / 2; }
+.nft__text.uno { grid-area: 2 / 1 / 3 / 2; }
+.nft__card__.dos { grid-area: 1 / 2 / 2 / 3; }
+.nft__text.dos { grid-area: 2 / 2 / 3 / 3; }
+.nft__card__.tres { grid-area: 1 / 3 / 2 / 4; }
+.nft__text.tres { grid-area: 2 / 3 / 3 / 4; }
+
+
+/* FOOTER */
+footer{
+   width: 100%;
+   position:  absolute; 
+   background: #1F1F46;
+   color: #fff;
+   padding: 100px 0 30px;
+   font-size: 13px;
+   line-height: 20px;
+}
+
+.logo-footer{
+    
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.row{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.col{
+  flex-basis: 25%;
+  padding: 10px;
+}
+
+.col:nth-child(2), .col:nth-child(3){
+    flex-basis: auto;
+}
+
+.col h3{
+    width: fit-content;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.form_footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+
+.form_footer .fa-solid{
+    font-size: 16px;
+    color: #e1306c;
+    padding: 10px;
+}
+
+.form_footer input{
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none;
+}
+
+.form_footer button{
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+hr{
+    width: 85%;
+    border: 0;
+    border-bottom: 0.5px solid #ccc;
+    margin: 20px auto;
+}
+
+.copy{
+    text-align: center;
+}
+
+.underline{
+    width: 100%;
+    height: 5px;
+    background: #1F1F46;
+    border-radius: 3px;
+    position: absolute;
+    left: 0;
+    top:25px;
+    overflow: hidden;    
+}
+
+.underline span{
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: movimiento 2s linear infinite;  
+}
+
+@keyframes movimiento{
+    0%{
+        left: -20px;
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+
+/* CONTACTO */
+
+.container_form{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 50px;
+    background-color: #E63946;
+    background-image: url(../img/mapa-barbuda-bn.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+ 
+ 
+}
+
+.container_form:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: url(../img/mapa-barbuda.png) no-repeat center;
+	background-size: cover;
+	filter: blur(50px);
+	z-index: -1;
+}
+.contact-box{
+	max-width: 850px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+}
+
+.left{
+	background: url("") no-repeat center;
+	background-size: cover;
+	height: 100%;
+}
+
+.right{
+	padding: 25px 40px;
+}
+
+h2{
+	position: relative;
+	padding: 0 0 10px;
+	margin-bottom: 10px;
+}
+
+h2:after{
+	content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: #E63946;
+}
+
+.field{
+	width: 100%;
+	border: 2px solid rgba(0, 0, 0, 0);
+	outline: none;
+	background-color: rgba(230, 230, 230, 0.6);
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .3s;
+}
+
+.field:hover{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+textarea{
+	min-height: 150px;
+}
+
+.btn{
+	width: 100%;
+	padding: 0.5rem 1rem;
+	background-color: #212E74;
+	color: #fff;
+	font-size: 1.1rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.btn:hover{
+    background-color: #E63946;
+}
+
+.field:focus{
+    border: 2px solid rgba(30,85,250,0.47);
+    background-color: #fff;
+}
+
+
+
+/* RESPONSITIVE */
+
+@media (max-width: 768px){
+
+    footer{
+        
+        bottom: unset;
+    }
+    .col{
+        flex-basis: 100%;
+      }
+      
+      .col:nth-child(2), :nth-child(3){
+          flex-basis: 15%
+      }
+    
+    .contact-box{
+		grid-template-columns: 1fr;
+	}
+
+	.left{
+		height: 200px;
+	}
+
+    /* .portfolio__table{
+        
+  
+    } */
+
+}
+
+
+
