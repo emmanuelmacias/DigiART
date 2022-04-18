@@ -16,6 +16,13 @@ body{
 
 a{
     text-decoration: none;
+    color:#E63946;
+
+}
+
+a:hover{
+    color: white;
+    
 }
 
 header, nav{
@@ -23,7 +30,7 @@ header, nav{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 30px 100px;
+    padding: 1.87rem 6.25rem;
     display: flex;
     justify-content: space-around;
     align-items: center; 
@@ -252,18 +259,36 @@ section img#front{
     grid-area: info__texto; 
     display: flex;
     flex-direction: column;
-    justify-content: center;  
+    justify-content: center; 
+    padding: 1em; 
 
 }
 .info__img { 
     grid-area: info__img;
-    display: flex;
-    justify-content: center;
-
+    display: grid;
+    justify-content: right;
 }
+
+/* #img_nft{
+    background-image: url(../img/explorar.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+} */
 
 .explorar img{
   width: 30em;
+  border-radius: 1.25rem;
+}
+
+.nft img{
+    width: 30em;
+    border-radius: 1.25rem;
+}
+
+.nosotros img{
+    border-radius: 1.25rem;
 }
 
 .explorar h3{
@@ -294,31 +319,124 @@ section img#front{
     color: white;
 }
 
-/* PORTFOLIO */
+/* ICONO ANIMADO MOUSE */
 
-.portfolio{
-    width: 100%;
-    min-height: 100vh;
+.mouse {
+    display: block;
+    position: absolute;
+    height: 45px;
+    width: 25px;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    bottom: 9rem;
+    left: 50%;
+    z-index: 10000;
+    transform: translateX(-50%);
+    animation: mouse alternate 0.8s infinite ;
+    background: #E63946;
+  }
+   
+  .mouse:after {
+    position: absolute;
+    border-radius: 2px;
+    width: 2px;
+    height: 0px;
+    content: '';
+    background: #fff;
+    margin-left: 10px;
+    margin-top: 5px;
+    animation: mouse-bola alternate 0.8s infinite;
+   
+  }
+   
+  @keyframes mouse-bola {
+    0% {
+      height: 0px;
+    }
+    100% {
+      height: 10px;
+    }
+  }
+   
+  @keyframes mouse {
+    0% {
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    100% {
+      -webkit-transform: translate(-50%, calc(-50% + 20px));
+      transform: translate(-50%, calc(-50% + 20px));
+    }
+  }
+
+/* PORTFOLIO */
+.container{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #1F1F46, #212E74 ); 
+    background-size: cover; 
+    padding: 0.6rem;   
 }
 
-.portfolio__table {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 0px;
-    padding: 50px;
-    
-    }
-    
-.nft__card__.uno{ 
-    grid-area: 1 / 1 / 2 / 2; }
-.nft__text.uno { grid-area: 2 / 1 / 3 / 2; }
-.nft__card__.dos { grid-area: 1 / 2 / 2 / 3; }
-.nft__text.dos { grid-area: 2 / 2 / 3 / 3; }
-.nft__card__.tres { grid-area: 1 / 3 / 2 / 4; }
-.nft__text.tres { grid-area: 2 / 3 / 3 / 4; }
+.card {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 300px 250px;
+  grid-template-areas: "image" "text";
+  border-radius: 18px;
+  background: url("../img/portfolio/background.jpg");
+  color:white;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  font-family: roboto;
+  text-align: justify;
+  cursor: pointer;
+  margin: 30px;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
 
+.js-tilt-glare {
+  border-radius: 18px;
+}
+.card-image {
+  grid-area: image;
+  background: url("../img/portfolio/002.png");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+  
+}
+
+.card-text {
+  grid-area: text;
+  margin: 25px;
+  transform: translateZ(30px);
+}
+
+.card-text p {
+  color: grey;
+  font-size:14px;
+  font-weight: 300;
+}
+
+.card-text h2 {
+  margin-top:0px;
+  font-size:28px;
+}
+
+/*card2*/
+.card-image.card2 {
+  background: url("../img/portfolio/004.png");
+  background-size: cover;
+}
+
+/*card3*/
+.card-image.card3 {
+  background: url("../img/portfolio/003.png");
+  background-size: cover;
+}
 
 /* FOOTER */
 footer{
@@ -355,12 +473,11 @@ footer{
   padding: 10px;
 }
 
-.col:nth-child(2), .col:nth-child(3){
-    flex-basis: auto;
+.col:nth-child(2){
+    flex-basis: content;
 }
 
 .col h3{
-    width: fit-content;
     margin-bottom: 10px;
     position: relative;
 }
@@ -551,20 +668,146 @@ textarea{
 
 /* RESPONSITIVE */
 
-@media (max-width: 768px){
+@media only screen and (max-width: 768px) {
 
-    footer{
+    header{
+        flex-wrap: wrap;
+    }
+
+    .logo{
+        padding-bottom: 1rem;
+    }
+    
+    .social{
+        padding-top: 1.25rem;
+    }
+
+    .menu{
+
+        flex-wrap: wrap;
+    }
+
+    .explorar, .nosotros, .nft{
+       padding: 2rem;
+       grid-template-columns: 1fr; 
+       /* grid-template-rows: 19rem 1fr;  */
+      
+   }
+
+   .info__texto { 
+    align-items: center;  
+
+    }
+
+    .info__texto p { 
+        text-align: center;
+        padding: 1em;  
+    
+        }
+
+
+    .explorar, .nft{
+        grid-template-areas: 
+        "info__texto"
+        "info__img";
+    }
+    
+    .nosotros{
+        grid-template-areas: 
+        "info__texto"
+        "info__img";
+    }
+
+    .info__img { 
+        grid-area: info__img;
+        display: flex;
+        justify-content: center;
+    
+    }
+
+    #titulo{
+        font-size: 4em;
         
+    }
+
+    #btn{
+        font-size: 1em;
+    }
+
+    
+    .explorar img{
+        width: min-content;
+    }
+    
+    .nft img{
+        width: min-content;
+    }
+    .explorar h3{
+    
+        font-size: 2rem;
+        color: white;
+        margin-bottom: 10px;
+    }
+    
+    .nosotros h3{
+    
+        font-size: 2rem;
+        color: white;
+        margin-bottom: 10px;
+    }
+    
+    .nft h3{
+    
+        font-size: 2.5rem;
+        color: white;
+        margin-bottom: 10px;
+    }
+    
+    
+    .explorar, .nosotros, .nft p{
+    
+        font-size: 1rem;
+        color: white;
+    }
+    
+
+    .container{
+        flex-wrap: wrap;
+    }
+
+    footer{ 
         bottom: unset;
     }
+
     .col{
         flex-basis: 100%;
+        display: grid;
+        justify-content: center;
+        padding: 1.5rem;
       }
-      
-      .col:nth-child(2), :nth-child(3){
-          flex-basis: 15%
-      }
+
+    .col h3{
+        text-align: center;
+    }
+
+    .col p{
+        text-align: center;
+        padding-top: 0.5rem;
+    }
     
+    .col:nth-child(2){
+        flex-basis: 100%;
+    }
+
+    .footer-sub-text{
+        text-align: center;
+    }
+
+   /*  .col:nth-child(2), :nth-child(3){
+          flex-basis: 20%
+      } */
+    
+     
     .contact-box{
 		grid-template-columns: 1fr;
 	}
@@ -572,11 +815,6 @@ textarea{
 	.left{
 		height: 200px;
 	}
-
-    /* .portfolio__table{
-        
-  
-    } */
 
 }
 

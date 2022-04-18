@@ -24,7 +24,7 @@
             <li><a href="/pages/contacto.html">Contacto</a></li>
         </ul>
 <!-- REDES SOCIALES -->
-        <span>
+        <span class="social">
             <a class="social-icon-instagram" href="https://www.instagram.com/" target="_blank" alt="logo-instagram">
                 <ion-icon name="logo-instagram" ></ion-icon>
             </a>
@@ -37,37 +37,41 @@
         </span>
     </header>
 <!-- PORTFOLIO -->
-            <div class="portfolio">
-            <div class="portfolio__table">
-
-                <div class="nft__card__ uno">
-                    <a href="#">
-                        <img src="#" alt="Card NFT 1">
-                    </a>
-                </div>
-                <div class="nft__text uno">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, illo.
-                </div>
-
-                <div class="nft__card__ dos">
-                    <a href="#">
-                        <img src="#" alt="Card NFT 2">
-                    </a>
-                </div>
-                <div class="nft__text dos">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, illo.
-                </div>
-
-                <div class="nft__card__ tres">
-                    <a href="#">
-                        <img src="#" alt="Card NFT 3">
-                    </a>
-                </div>
-                <div class="nft__text tres">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, illo.
-                </div>
-            </div>
-            </div>
+    <div class="container">
+    <div class="card">
+        <div class="card-image" ></div>
+        <div class="card-text">
+        <h2>#NFT001</h2>
+        <p>“Por orden de los Peaky Blinders”</p>
+        <br>
+        <p>INTELIGENCIA 10</p>
+        <p>AGILIDAD 8</p>
+        <p>FUERZA 8</p>
+        </div>
+    </div>
+    <div class="card rgb">
+        <div class="card-image card2"></div>
+        <div class="card-text card2">
+        <h2>#NFT002</h2>
+        <p>La princesa se hace presente.</p>
+        <br>
+        <p>INTELIGENCIA 2</p>
+        <p>AGILIDAD 3</p>
+        <p>FUERZA 1</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-image card3"></div>
+            <div class="card-text card3">   
+            <h2>#NFT003</h2>
+            <p>La velocidad de la Katana.</p>
+            <br>
+            <p>INTELIGENCIA 10</p>
+            <p>AGILIDAD 9</p>
+            <p>FUERZA 5</p>
+        </div>
+    </div>
+</div>
 
 <!-- FOOTER -->
 <footer> 
@@ -85,7 +89,7 @@
         </div>
         
         <div class="col">
-            <h3>Newsletter<div class="underline"><span></span></div></h3>
+            <h3>NEWSLETTER<div class="underline"><span></span></div></h3>
             <br>
             <p class="footer-sub-text">¿Querés enterarte de todas las novedades?</p>
                 <form class="form_footer" action="" method="">
@@ -104,6 +108,15 @@
 <script src="../js/jquery-3.2.1.js"></script>
 <script src="../js/script.js"></script>
 <script src="../js/disney.js"></script>
+<script src="../js/vanilla-tilt.min.js"></script>
+<script src="../js/vanilla-tilt.js"></script>
+    <script>
+      VanillaTilt.init(document.querySelectorAll(".card"),{
+        glare: true,
+        reverse: true,
+        "max-glare": 0.15
+      });
+    </script>
 </body>
 <!-- 
     
