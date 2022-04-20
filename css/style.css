@@ -122,7 +122,7 @@ nav ul li a{
 nav ul li a:hover{
     color: white;
     background: #E63946;
-    
+
 }
     
 
@@ -329,6 +329,56 @@ section img#front{
     color: white;
     
 }
+
+
+/* BOTON "CONOCENOS" */
+
+.button {
+    display: inline-block;
+    padding: .75rem 1.25rem;
+    border-radius: 10rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .15rem;
+    transition: ease-in .3s;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    z-index: 1;  
+}
+
+.button:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, #E63946, #212E74 ); 
+      border-radius: 10rem;
+      z-index: -2;
+    }
+
+.button:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background: linear-gradient(to right,#212E74 , #E63946 ); 
+      transition: ease-out .3s;
+      border-radius: 10rem;
+      
+      z-index: -1;
+    }
+
+.button:hover:before {
+      color: #fff;
+      width: 100%;
+}
+
 
   /* ICONO ANIMADO MOUSE */
 
