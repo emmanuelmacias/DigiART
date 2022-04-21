@@ -733,6 +733,158 @@ textarea{
 
 /* RESPONSITIVE */
 
+
+@media only screen and (max-width: 1280px) {
+
+    header{
+        flex-wrap: wrap;
+    }
+
+    .logo{
+        padding-bottom: 1rem;
+    }
+    
+    .social{
+        padding-top: 1.25rem;
+    }
+
+    .menu{
+
+        flex-wrap: wrap;
+    }
+
+    .explorar, .nosotros, .nft{
+       padding: 2rem;
+       grid-template-columns: 1fr; 
+       /* grid-template-rows: 19rem 1fr;  */
+      
+   }
+
+   .info__texto { 
+    align-items: center;  
+
+    }
+
+    .info__texto p { 
+        text-align: center;
+        padding: 1em;  
+    
+        }
+
+
+    .explorar, .nft{
+        grid-template-areas: 
+        "info__texto"
+        "info__img";
+    }
+    
+    .nosotros{
+        grid-template-areas: 
+        "info__texto"
+        "info__img";
+    }
+
+    .info__img { 
+        grid-area: info__img;
+        display: flex;
+        justify-content: center;
+    
+    }
+
+    #titulo{
+        font-size: 4em;
+        
+    }
+
+    #btn{
+        font-size: 1em;
+    }
+
+    
+    .explorar img{
+        width: min-content;
+    }
+    
+    .nft img{
+        width: min-content;
+    }
+    .explorar h3{
+    
+        font-size: 2rem;
+        color: white;
+        margin-bottom: 10px;
+    }
+    
+    .nosotros h3{
+    
+        font-size: 2rem;
+        color: white;
+        margin-bottom: 10px;
+    }
+    
+    .nft h3{
+    
+        font-size: 2.5rem;
+        color: white;
+        margin-bottom: 10px;
+    }
+    
+    
+    .explorar, .nosotros, .nft p{
+    
+        font-size: 1rem;
+        color: white;
+    }
+    
+
+    .container{
+        flex-wrap: wrap;
+    }
+
+    footer{ 
+        bottom: unset;
+    }
+
+    .col{
+        flex-basis: 100%;
+        display: grid;
+        justify-content: center;
+        padding: 1.5rem;
+      }
+
+    .col h3{
+        text-align: center;
+    }
+
+    .col p{
+        text-align: center;
+        padding-top: 0.5rem;
+    }
+    
+    .col:nth-child(2){
+        flex-basis: 100%;
+    }
+
+    .footer-sub-text{
+        text-align: center;
+    }
+
+   /*  .col:nth-child(2), :nth-child(3){
+          flex-basis: 20%
+      } */
+    
+     
+    .contact-box{
+		grid-template-columns: 1fr;
+	}
+
+	.left{
+		height: 200px;
+	}
+
+}
+
+
 @media only screen and (max-width: 768px) {
 
     header{
@@ -883,5 +1035,356 @@ textarea{
 
 }
 
+
+@media only screen and (max-width: 520px) {
+
+    section{
+        padding-bottom: 25rem;
+    }
+
+    .mouse{
+        bottom: 40%;
+    }
+
+    header{
+        flex-wrap: wrap;
+    }
+
+    nav ul{
+        flex-direction: column;
+        padding-right: 20px;
+    }
+
+    header ul{
+        
+        padding-right: 20px;
+    }
+    header ul li a{
+        padding: 0;
+    }
+    
+    nav ul li a{
+        padding: 0;   
+    }
+
+    .logo{
+        padding-bottom: 1rem;
+    }
+    
+    .social{
+        padding-top: 1.25rem;
+    }
+
+    .menu{
+
+        flex-wrap: wrap;
+    }
+
+    .explorar, .nosotros, .nft{
+       padding: 2rem;
+       grid-template-columns: 1fr; 
+       /* grid-template-rows: 19rem 1fr;  */
+      
+   }
+
+   .info__texto { 
+    align-items: center;  
+
+    }
+
+    .info__texto p { 
+        text-align: center;
+        padding: 1em;  
+    
+        }
+
+
+    .explorar, .nft{
+        grid-template-areas: 
+        "info__texto"
+        "info__img";
+    }
+    
+    .nosotros{
+        grid-template-areas: 
+        "info__texto"
+        "info__img";
+    }
+
+    .info__img { 
+        grid-area: info__img;
+        display: flex;
+        justify-content: center;
+    
+    }
+
+    #titulo{
+        font-size: 3em;
+        
+    }
+
+    #btn{
+        font-size: 1em;
+        text-align: center;
+    }
+
+    
+    .explorar img{
+        width: 100%;
+    }
+    
+    .nosotros img{
+        width: 100%;
+    }
+
+    
+    .nft img{
+        width: 150%;
+    }
+    .explorar h3{
+        text-align: center;
+        font-size: 2rem;
+        color: white;
+        margin-bottom: 10px;
+    }
+    
+    .nosotros h3{
+    
+        font-size: 2rem;
+        color: white;
+        margin-bottom: 10px;
+    }
+    
+    .nft h3{
+    
+        font-size: 2rem;
+        color: white;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    
+    .explorar, .nosotros, .nft p{
+    
+        font-size: 1rem;
+        color: white;
+    }
+    
+
+    .container{
+        flex-wrap: wrap;
+    }
+
+    footer{ 
+        bottom: unset;
+    }
+
+    .col{
+        flex-basis: 100%;
+        display: grid;
+        justify-content: center;
+        padding: 1.5rem;
+      }
+
+    .col h3{
+        text-align: center;
+    }
+
+    .col p{
+        text-align: center;
+        padding-top: 0.5rem;
+    }
+    
+    .col:nth-child(2){
+        flex-basis: 100%;
+    }
+
+    .footer-sub-text{
+        text-align: center;
+    }
+
+   /*  .col:nth-child(2), :nth-child(3){
+          flex-basis: 20%
+      } */
+    
+     
+    .contact-box{
+		grid-template-columns: 1fr;
+	}
+
+	.left{
+		height: 200px;
+	}
+
+}
+
+
+@media only screen and (max-width: 410px) and (max-width: 450px) {
+
+    section{
+        padding-bottom: 15rem;
+    }
+
+    .mouse{
+        bottom: 20%;
+    }
+    header{
+        flex-wrap: wrap;
+    }
+
+    header ul{
+        flex-direction: column;
+        padding-right: 20px;
+    }
+    .logo{
+        padding-bottom: 1rem;
+    }
+    
+    .social{
+        padding-top: 1.25rem;
+    }
+
+    .menu{
+
+        flex-wrap: wrap;
+    }
+
+    .explorar, .nosotros, .nft{
+       padding: 2rem;
+       grid-template-columns: 1fr; 
+       /* grid-template-rows: 19rem 1fr;  */
+      
+   }
+
+   .info__texto { 
+    align-items: center;  
+
+    }
+
+    .info__texto p { 
+        text-align: center;
+        padding: 1em;  
+    
+        }
+
+
+    .explorar, .nft{
+        grid-template-areas: 
+        "info__texto"
+        "info__img";
+    }
+    
+    .nosotros{
+        grid-template-areas: 
+        "info__texto"
+        "info__img";
+    }
+
+    .info__img { 
+        grid-area: info__img;
+        display: flex;
+        justify-content: center;
+    
+    }
+
+    #titulo{
+        font-size: 3em;
+        
+    }
+
+    #btn{
+        font-size: 1em;
+        text-align: center;
+    }
+
+    
+    .explorar img{
+        width: 100%;
+    }
+    
+    .nosotros img{
+        width: 100%;
+    }
+
+    
+    .nft img{
+        width: 150%;
+    }
+    .explorar h3{
+        text-align: center;
+        font-size: 2rem;
+        color: white;
+        margin-bottom: 10px;
+    }
+    
+    .nosotros h3{
+        text-align: center;
+        font-size: 2rem;
+        color: white;
+        margin-bottom: 10px;
+    }
+    
+    .nft h3{
+    
+        font-size: 2rem;
+        color: white;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    
+    .explorar, .nosotros, .nft p{
+    
+        font-size: 1rem;
+        color: white;
+    }
+    
+
+    .container{
+        flex-wrap: wrap;
+    }
+
+    footer{ 
+        bottom: unset;
+    }
+
+    .col{
+        flex-basis: 100%;
+        display: grid;
+        justify-content: center;
+        padding: 1.5rem;
+      }
+
+    .col h3{
+        text-align: center;
+    }
+
+    .col p{
+        text-align: center;
+        padding-top: 0.5rem;
+    }
+    
+    .col:nth-child(2){
+        flex-basis: 100%;
+    }
+
+    .footer-sub-text{
+        text-align: center;
+    }
+
+   /*  .col:nth-child(2), :nth-child(3){
+          flex-basis: 20%
+      } */
+    
+     
+    .contact-box{
+		grid-template-columns: 1fr;
+	}
+
+	.left{
+		height: 200px;
+	}
+
+}
 
 
