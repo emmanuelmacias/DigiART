@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins'; 
+    font-family: 'Poppins', sans-serif; 
     scroll-behavior: smooth;
     animation-delay: 2s;
 }
@@ -17,6 +17,7 @@ body{
 a{
     text-decoration: none;
     color:#E63946;
+    
 }
 
 a:hover{
@@ -27,7 +28,13 @@ p{
     padding-bottom: 1rem;
 }
 
-header, nav{
+h1, h2, h3{
+    font-weight: bold;
+}
+
+/* MENU NO INDEX */
+
+header, .navbar{
     position: sticky;
     top: 0;
     left: 0;
@@ -49,42 +56,35 @@ header .logo{
     letter-spacing: 2px;
 }
 
-header ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* MENU BURGER */
+#menu_on{
+	display: inline-block;
+	width:30px;
+	height: 20px;
+	position: relative;
+	z-index: 2;
+}
+ 
+#menu_on span{
+   
+	width: 100%;
+	height: 3px;
+	border-radius: 4px;
+	display: block;
+	position: absolute;
+	background: #fff;
+	transition: all 0.25s ease; /* Propiedades a animar | Tiempo | Tipo animación*/
+	transform-origin : 0px 100%;
+}
+ 
+#menu_on span:nth-child(2){
+	top: calc(50% - 2px);
+}
+ 
+#menu_on span:nth-child(3){
+bottom: 0;
 }
 
-header ul li{
-    list-style: none;
-    margin-left: 20px;
-}
-
-header ul li a{
-    text-decoration: none;
-    padding: 6px 15px;
-    color: white;
-    border-radius: 20px;
-    transition: ease 0.5s;
-}
-
-header ul li a:hover{
-    background: #E63946;
-    color:white;
-}
-
-/* nav{
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px 100px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center; 
-    z-index: 10000;
-    background-color: #1F1F46;
-} */
 
 /* BARRA DE MENU */
 
@@ -96,32 +96,51 @@ nav .logo{
     text-transform: uppercase;
     letter-spacing: 2px;
 }
-
-nav ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.navbar-light .navbar-toggler{
+    color: white;
+    border-color: white;
 }
 
-nav ul li{
-    list-style: none;
-    margin-left: 20px;
+.navbar-light .navbar-brand{
+    color: white;
+}
+.navbar-light .navbar-brand:hover{
+    color: #E63946;
 }
 
-nav ul li a{
+.navbar-light .navbar-nav .nav-link{
+    color:white;
+}
+
+.navbar-light .navbar-nav .nav-link.active{
+    color:#E63946;
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+    color: white;
+}
+
+.nav-link{
+    color: white;
+    width: 100px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.nav-link a{
     text-decoration: none;
     padding: 6px 15px;
     color: white;
     border-radius: 20px;
     transition: ease 0.5s;
-    -webkit-transition: all 0.1s linear;
-    transition: all 0.1s linear;
+   
     
 }
 
-nav ul li a:hover{
+.nav-link:hover{
     color: white;
     background: #E63946;
+    border-radius: 20px;
 
 }
     
@@ -242,74 +261,48 @@ section img#front{
 /* #EXPLORAR - #NOSOTROS - #NFT */
 
 .explorar, .nosotros, .nft{
-    display: grid;
+    padding: 5rem;
     position: relative;
-    min-height: 100vh;
-/* ACA ESTA LA SOLCION AL ESPACIO DESPUES DEL SCROLL */
-    padding: 8rem;
-    background: linear-gradient(to right, #1F1F46, #212E74 ); 
-    grid-template-columns: 1fr 1fr; 
-    grid-template-rows: 1fr; 
-    gap: 0px 1rem; 
-    
-     
-}
-
-.explorar, .nft{
-    grid-template-areas: 
-    "info__texto info__img";
-}
-
-.nosotros{
-    grid-template-areas: 
-    "info__img info__texto";
-}
-
-.info__texto { 
-    grid-area: info__texto; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    padding: 1em; 
-
-}
-.info__img { 
-    grid-area: info__img;
-    display: grid;
-    justify-content: right;
-}
-
-/* #img_nft{
-    background-image: url(../img/explorar.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
     width: 100%;
-} */
+    background: linear-gradient(to right, #1F1F46, #212E74 );    
+}
+
+.container__img{
+    display: grid;
+    justify-content: center;
+}
 
 .explorar img{
-  width: 30em;
-  border-radius: 1.25rem;
+    border-radius: 1.25rem;
+    max-width: 100%;
+    height: auto;
+}
+
+.container__text{
+    display: flex;
+    flex-wrap: wrap;
+
 }
 
 .nft img{
-    width: 30em;
     border-radius: 1.25rem;
+    max-width: 100%;
+    height: auto;
 }
 
 .nosotros img{
     border-radius: 1.25rem;
+    max-width: 100%;
+    height: auto;
 }
 
 .explorar h3{
-
     font-size: 2.5rem;
     color: white;
     margin-bottom: 10px;
 }
 
 .nosotros h3{
-
     font-size: 2.5rem;
     color: white;
     margin-bottom: 10px;
@@ -431,7 +424,7 @@ section img#front{
   }
 
 /* PORTFOLIO */
-.container{
+.portfolio{
     width: 100vw;
     display: flex;
     align-items: center;
@@ -480,6 +473,7 @@ section img#front{
   color: grey;
   font-size:14px;
   font-weight: 300;
+  padding: 0;
 }
 
 .card-text h2 {
@@ -520,13 +514,28 @@ footer{
     letter-spacing: 2px;
 }
 
+.col h3{
+    font-size: 1rem;
+}
+
+.col p{
+    padding: 0;
+}
+
+.container__footer{
+    width: 86%;
+    margin: auto;
+    
+}
+ 
 .row{
-    width: 85%;
+    width: 100%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
+    
 }
 
 .col{
@@ -542,7 +551,7 @@ footer{
     margin-bottom: 10px;
     position: relative;
 }
-
+ 
 .form_footer{
     display: flex;
     align-items: center;
@@ -667,13 +676,13 @@ hr{
 	padding: 25px 40px;
 }
 
-h2{
+.container_form h2{
 	position: relative;
 	padding: 0 0 10px;
 	margin-bottom: 10px;
 }
 
-h2:after{
+.container_form h2:after{
 	content: '';
     position: absolute;
     left: 50%;
@@ -727,344 +736,25 @@ textarea{
 
 
 
-
-
-
-
 /* RESPONSITIVE */
 
+@media only screen and (max-width: 992px) {
 
-@media only screen and (max-width: 1280px) {
-
-    header{
-        flex-wrap: wrap;
-    }
-
-    .logo{
-        padding-bottom: 1rem;
-    }
-    
-    .social{
-        padding-top: 1.25rem;
-    }
-
-    .menu{
-
-        flex-wrap: wrap;
-    }
-
-    .explorar, .nosotros, .nft{
-       padding: 2rem;
-       grid-template-columns: 1fr; 
-       /* grid-template-rows: 19rem 1fr;  */
-      
-   }
-
-   .info__texto { 
-    align-items: center;  
-
-    }
-
-    .info__texto p { 
-        text-align: center;
-        padding: 1em;  
-    
-        }
-
-
-    .explorar, .nft{
-        grid-template-areas: 
-        "info__texto"
-        "info__img";
-    }
-    
-    .nosotros{
-        grid-template-areas: 
-        "info__texto"
-        "info__img";
-    }
-
-    .info__img { 
-        grid-area: info__img;
-        display: flex;
+    .d-flex{
         justify-content: center;
-    
     }
 
-    #titulo{
-        font-size: 4em;
-        
-    }
-
-    #btn{
-        font-size: 1em;
-    }
-
-    
-    .explorar img{
-        width: min-content;
-    }
-    
-    .nft img{
-        width: min-content;
-    }
-    .explorar h3{
-    
-        font-size: 2rem;
-        color: white;
-        margin-bottom: 10px;
-    }
-    
-    .nosotros h3{
-    
-        font-size: 2rem;
-        color: white;
-        margin-bottom: 10px;
-    }
-    
-    .nft h3{
-    
-        font-size: 2.5rem;
-        color: white;
-        margin-bottom: 10px;
-    }
-    
-    
-    .explorar, .nosotros, .nft p{
-    
-        font-size: 1rem;
-        color: white;
-    }
-    
-
-    .container{
-        flex-wrap: wrap;
-    }
-
-    footer{ 
-        bottom: unset;
-    }
-
-    .col{
-        flex-basis: 100%;
+    .navbar-nav{
         display: grid;
         justify-content: center;
-        padding: 1.5rem;
-      }
-
-    .col h3{
-        text-align: center;
     }
-
-    .col p{
-        text-align: center;
-        padding-top: 0.5rem;
-    }
-    
-    .col:nth-child(2){
-        flex-basis: 100%;
-    }
-
-    .footer-sub-text{
-        text-align: center;
-    }
-
-   /*  .col:nth-child(2), :nth-child(3){
-          flex-basis: 20%
-      } */
-    
-     
-    .contact-box{
-		grid-template-columns: 1fr;
-	}
-
-	.left{
-		height: 200px;
-	}
-
-}
-
-
-@media only screen and (max-width: 768px) {
-
-    header{
-        flex-wrap: wrap;
-    }
-
-    .logo{
-        padding-bottom: 1rem;
-    }
-    
-    .social{
-        padding-top: 1.25rem;
-    }
-
-    .menu{
-
-        flex-wrap: wrap;
-    }
-
-    .explorar, .nosotros, .nft{
-       padding: 2rem;
-       grid-template-columns: 1fr; 
-       /* grid-template-rows: 19rem 1fr;  */
-      
-   }
-
-   .info__texto { 
-    align-items: center;  
-
-    }
-
-    .info__texto p { 
-        text-align: center;
-        padding: 1em;  
-    
-        }
-
-
-    .explorar, .nft{
-        grid-template-areas: 
-        "info__texto"
-        "info__img";
-    }
-    
-    .nosotros{
-        grid-template-areas: 
-        "info__texto"
-        "info__img";
-    }
-
-    .info__img { 
-        grid-area: info__img;
-        display: flex;
-        justify-content: center;
-    
-    }
-
-    #titulo{
-        font-size: 4em;
-        
-    }
-
-    #btn{
-        font-size: 1em;
-    }
-
-    
-    .explorar img{
-        width: min-content;
-    }
-    
-    .nft img{
-        width: min-content;
-    }
-    .explorar h3{
-    
-        font-size: 2rem;
-        color: white;
-        margin-bottom: 10px;
-    }
-    
-    .nosotros h3{
-    
-        font-size: 2rem;
-        color: white;
-        margin-bottom: 10px;
-    }
-    
-    .nft h3{
-    
-        font-size: 2.5rem;
-        color: white;
-        margin-bottom: 10px;
-    }
-    
-    
-    .explorar, .nosotros, .nft p{
-    
-        font-size: 1rem;
-        color: white;
-    }
-    
-
-    .container{
-        flex-wrap: wrap;
-    }
-
-    footer{ 
-        bottom: unset;
-    }
-
-    .col{
-        flex-basis: 100%;
-        display: grid;
-        justify-content: center;
-        padding: 1.5rem;
-      }
-
-    .col h3{
-        text-align: center;
-    }
-
-    .col p{
-        text-align: center;
-        padding-top: 0.5rem;
-    }
-    
-    .col:nth-child(2){
-        flex-basis: 100%;
-    }
-
-    .footer-sub-text{
-        text-align: center;
-    }
-
-   /*  .col:nth-child(2), :nth-child(3){
-          flex-basis: 20%
-      } */
-    
-     
-    .contact-box{
-		grid-template-columns: 1fr;
-	}
-
-	.left{
-		height: 200px;
-	}
-
-}
-
-
-@media only screen and (max-width: 520px) {
 
     section{
-        padding-bottom: 25rem;
+        padding-bottom: 15rem;
     }
 
     .mouse{
-        bottom: 40%;
-    }
-
-    header{
-        flex-wrap: wrap;
-    }
-
-    nav ul{
-        flex-direction: column;
-        padding-right: 20px;
-    }
-
-    header ul{
-        
-        padding-right: 20px;
-    }
-    header ul li a{
-        padding: 0;
-    }
-    
-    nav ul li a{
-        padding: 0;   
+        bottom: 30%;
     }
 
     .logo{
@@ -1075,20 +765,14 @@ textarea{
         padding-top: 1.25rem;
     }
 
-    .menu{
-
-        flex-wrap: wrap;
-    }
-
     .explorar, .nosotros, .nft{
        padding: 2rem;
-       grid-template-columns: 1fr; 
-       /* grid-template-rows: 19rem 1fr;  */
       
    }
 
-   .info__texto { 
-    align-items: center;  
+   .container__text { 
+        justify-content: center;
+        text-align: center; 
 
     }
 
@@ -1098,28 +782,8 @@ textarea{
     
         }
 
-
-    .explorar, .nft{
-        grid-template-areas: 
-        "info__texto"
-        "info__img";
-    }
-    
-    .nosotros{
-        grid-template-areas: 
-        "info__texto"
-        "info__img";
-    }
-
-    .info__img { 
-        grid-area: info__img;
-        display: flex;
-        justify-content: center;
-    
-    }
-
     #titulo{
-        font-size: 3em;
+        font-size: 5em;
         
     }
 
@@ -1128,19 +792,6 @@ textarea{
         text-align: center;
     }
 
-    
-    .explorar img{
-        width: 100%;
-    }
-    
-    .nosotros img{
-        width: 100%;
-    }
-
-    
-    .nft img{
-        width: 150%;
-    }
     .explorar h3{
         text-align: center;
         font-size: 2rem;
@@ -1149,7 +800,7 @@ textarea{
     }
     
     .nosotros h3{
-    
+        text-align: center;
         font-size: 2rem;
         color: white;
         margin-bottom: 10px;
@@ -1171,7 +822,7 @@ textarea{
     }
     
 
-    .container{
+    .portfolio{
         flex-wrap: wrap;
     }
 
@@ -1203,11 +854,6 @@ textarea{
         text-align: center;
     }
 
-   /*  .col:nth-child(2), :nth-child(3){
-          flex-basis: 20%
-      } */
-    
-     
     .contact-box{
 		grid-template-columns: 1fr;
 	}
@@ -1218,8 +864,7 @@ textarea{
 
 }
 
-
-@media only screen and (max-width: 410px) and (max-width: 450px) {
+@media only screen and (max-width: 576px) {
 
     section{
         padding-bottom: 15rem;
@@ -1228,25 +873,13 @@ textarea{
     .mouse{
         bottom: 20%;
     }
-    header{
-        flex-wrap: wrap;
-    }
 
-    header ul{
-        flex-direction: column;
-        padding-right: 20px;
-    }
     .logo{
         padding-bottom: 1rem;
     }
     
     .social{
         padding-top: 1.25rem;
-    }
-
-    .menu{
-
-        flex-wrap: wrap;
     }
 
     .explorar, .nosotros, .nft{
@@ -1256,36 +889,17 @@ textarea{
       
    }
 
-   .info__texto { 
-    align-items: center;  
+   .container__text { 
+       display: flex;
+       align-items: center;  
 
     }
 
-    .info__texto p { 
+    .container__tex p { 
         text-align: center;
         padding: 1em;  
     
         }
-
-
-    .explorar, .nft{
-        grid-template-areas: 
-        "info__texto"
-        "info__img";
-    }
-    
-    .nosotros{
-        grid-template-areas: 
-        "info__texto"
-        "info__img";
-    }
-
-    .info__img { 
-        grid-area: info__img;
-        display: flex;
-        justify-content: center;
-    
-    }
 
     #titulo{
         font-size: 3em;
@@ -1297,19 +911,6 @@ textarea{
         text-align: center;
     }
 
-    
-    .explorar img{
-        width: 100%;
-    }
-    
-    .nosotros img{
-        width: 100%;
-    }
-
-    
-    .nft img{
-        width: 150%;
-    }
     .explorar h3{
         text-align: center;
         font-size: 2rem;
@@ -1340,7 +941,7 @@ textarea{
     }
     
 
-    .container{
+    .portfolio{
         flex-wrap: wrap;
     }
 
@@ -1372,11 +973,6 @@ textarea{
         text-align: center;
     }
 
-   /*  .col:nth-child(2), :nth-child(3){
-          flex-basis: 20%
-      } */
-    
-     
     .contact-box{
 		grid-template-columns: 1fr;
 	}
@@ -1386,5 +982,3 @@ textarea{
 	}
 
 }
-
-
