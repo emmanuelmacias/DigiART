@@ -868,6 +868,7 @@ textarea{
 
     section{
         padding-bottom: 15rem;
+        overflow: hidden; /* Tuve que usarlo al tener la animación del scroll que van las imagenes hacia la derecha */
     }
 
     .mouse{
