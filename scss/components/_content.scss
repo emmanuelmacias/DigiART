@@ -1,0 +1,84 @@
+/* #EXPLORAR - #NOSOTROS - #NFT */
+
+.explorar, .nosotros, .nft{
+    padding: 3rem 5rem 0 5rem;
+    position: relative;
+    width: 100%;
+    background: $gradient; 
+    
+    .container__img{
+        display: grid;
+        justify-content: center;
+
+        img{
+            border-radius: 1.25rem;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .container__text{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    h3{
+        font-size: 2.5rem;
+        color: white;
+        margin-bottom: 10px;
+    }
+
+    p{
+        font-size: 1rem;
+        color: white; 
+    }
+
+
+}
+
+/* BOTON "CONOCENOS" */
+
+.button {
+    display: inline-block;
+    padding: .75rem 1.25rem;
+    border-radius: 10rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .15rem;
+    transition: ease-in .3s;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    z-index: 1;  
+
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, $color-secundario, #212E74 ); 
+        border-radius: 10rem;
+        z-index: -2;
+    }
+
+    &::before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background: linear-gradient(to right,#212E74 , $color-secundario ); 
+        transition: ease-out .3s;
+        border-radius: 10rem;
+        z-index: -1;
+    }
+
+    &:hover::before{
+        color: #fff;
+        width: 100%;
+    }
+}

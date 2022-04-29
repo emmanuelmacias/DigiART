@@ -1,0 +1,665 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  animation-delay: 2s; }
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden; }
+
+a {
+  text-decoration: none;
+  color: #E63946; }
+
+a:hover {
+  color: white; }
+
+p {
+  padding-bottom: 1rem; }
+
+h1, h2, h3 {
+  font-weight: bold; }
+
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.87rem 6.25rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 10000;
+  background-color: #1F1F46; }
+
+.navbar-light .navbar-toggler {
+  color: white;
+  border-color: white; }
+
+.navbar-light .navbar-brand {
+  color: white; }
+  .navbar-light .navbar-brand:hover {
+    color: #E63946; }
+
+.navbar-light .navbar-nav .nav-link {
+  color: white; }
+  .navbar-light .navbar-nav .nav-link.active {
+    color: #E63946; }
+  .navbar-light .navbar-nav .nav-link:hover {
+    color: white; }
+
+.nav-link {
+  color: white;
+  width: 100px;
+  text-align: center;
+  border-radius: 20px; }
+  .nav-link a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: white;
+    border-radius: 20px;
+    transition: ease 0.5s; }
+  .nav-link:hover {
+    color: white;
+    background: #E63946;
+    border-radius: 20px; }
+
+/* ICONOS REDES SOCIALES */
+.social {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  padding-left: 5px; }
+
+.social-icon-instagram {
+  font-size: 20px;
+  color: white;
+  text-decoration: none; }
+  .social-icon-instagram:hover {
+    font-size: 20px;
+    color: #e1306c;
+    text-decoration: none;
+    transition: ease 0.5s; }
+
+.social-icon-facebook {
+  font-size: 20px;
+  color: white;
+  text-decoration: none; }
+  .social-icon-facebook:hover {
+    font-size: 20px;
+    color: #3b5998;
+    text-decoration: none;
+    transition: ease 0.5s; }
+
+.social-icon-twitter {
+  font-size: 20px;
+  color: white;
+  text-decoration: none; }
+  .social-icon-twitter:hover {
+    font-size: 20px;
+    color: #00ACED;
+    text-decoration: none;
+    transition: ease 0.5s; }
+
+/* MENU BURGER */
+#menu_on {
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+  position: relative;
+  z-index: 2; }
+  #menu_on span:nth-child(2) {
+    top: calc(50% - 2px); }
+  #menu_on span:nth-child(3) {
+    bottom: 0; }
+
+#menu_on span {
+  width: 100%;
+  height: 3px;
+  border-radius: 4px;
+  display: block;
+  position: absolute;
+  background: #fff;
+  transition: all 0.25s ease;
+  /* Propiedades a animar | Tiempo | Tipo animación*/
+  transform-origin: 0px 100%; }
+
+/* IMAGEN PRINCIPAL CON BOTON A #explorar */
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #1F1F46, transparent);
+    z-index: 1000; }
+  section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none; }
+  section img#luna {
+    mix-blend-mode: screen; }
+  section img#front {
+    z-index: 10; }
+
+#titulo {
+  position: absolute;
+  color: white;
+  white-space: nowrap;
+  font-size: 7.5em;
+  z-index: 9; }
+
+#btn {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 30px;
+  border-radius: 40px;
+  background: #E63946;
+  color: white;
+  font-size: 1.5em;
+  z-index: 9;
+  transform: translateY(100px); }
+
+/* ICONO ANIMADO MOUSE */
+.mouse {
+  display: block;
+  position: absolute;
+  height: 45px;
+  width: 25px;
+  border-radius: 20px;
+  border: 2px solid #fff;
+  bottom: 9rem;
+  left: 50%;
+  z-index: 10000;
+  transform: translateX(-50%);
+  animation: mouse alternate 0.8s infinite;
+  background: #E63946; }
+  .mouse::after {
+    position: absolute;
+    border-radius: 2px;
+    width: 2px;
+    height: 0px;
+    content: '';
+    background: #fff;
+    margin-left: 10px;
+    margin-top: 5px;
+    animation: mouse-bola alternate 0.8s infinite; }
+
+@keyframes mouse-bola {
+  0% {
+    height: 0px; }
+  100% {
+    height: 10px; } }
+
+@keyframes mouse {
+  0% {
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  100% {
+    -webkit-transform: translate(-50%, calc(-50% + 20px));
+    transform: translate(-50%, calc(-50% + 20px)); } }
+
+/* #EXPLORAR - #NOSOTROS - #NFT */
+.explorar, .nosotros, .nft {
+  padding: 3rem 5rem 0 5rem;
+  position: relative;
+  width: 100%;
+  background: linear-gradient(to right, #1F1F46, #212E74); }
+  .explorar .container__img, .nosotros .container__img, .nft .container__img {
+    display: grid;
+    justify-content: center; }
+    .explorar .container__img img, .nosotros .container__img img, .nft .container__img img {
+      border-radius: 1.25rem;
+      max-width: 100%;
+      height: auto; }
+  .explorar .container__text, .nosotros .container__text, .nft .container__text {
+    display: flex;
+    flex-wrap: wrap; }
+  .explorar h3, .nosotros h3, .nft h3 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 10px; }
+  .explorar p, .nosotros p, .nft p {
+    font-size: 1rem;
+    color: white; }
+
+/* BOTON "CONOCENOS" */
+.button {
+  display: inline-block;
+  padding: .75rem 1.25rem;
+  border-radius: 10rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: .15rem;
+  transition: ease-in .3s;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  z-index: 1; }
+  .button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #E63946, #212E74);
+    border-radius: 10rem;
+    z-index: -2; }
+  .button::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(to right, #212E74, #E63946);
+    transition: ease-out .3s;
+    border-radius: 10rem;
+    z-index: -1; }
+  .button:hover::before {
+    color: #fff;
+    width: 100%; }
+
+/* PORTFOLIO */
+.portfolio {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #1F1F46, #212E74);
+  background-size: cover;
+  padding: 0.6rem; }
+
+.card {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 300px 250px;
+  grid-template-areas: "image" "text";
+  border-radius: 18px;
+  background: url("../img/portfolio/background.jpg");
+  color: white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  font-family: roboto;
+  text-align: justify;
+  cursor: pointer;
+  margin: 30px;
+  transform-style: preserve-3d;
+  transform: perspective(1000px); }
+
+.js-tilt-glare {
+  border-radius: 18px; }
+
+/* Cards */
+.card-image {
+  grid-area: image;
+  background: url("../img/portfolio/002.png");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover; }
+  .card-image.card2 {
+    background: url("../img/portfolio/004.png");
+    background-size: cover; }
+  .card-image.card3 {
+    background: url("../img/portfolio/003.png");
+    background-size: cover; }
+
+.card-text {
+  grid-area: text;
+  margin: 25px;
+  transform: translateZ(30px); }
+  .card-text p {
+    color: grey;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 0; }
+  .card-text h2 {
+    margin-top: 0px;
+    font-size: 28px; }
+
+/* CONTACTO */
+.container_form {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color: #E63946;
+  background-image: url(../img/mapa-barbuda-bn.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left; }
+  .container_form::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: url(../img/mapa-barbuda.png) no-repeat center;
+    background-size: cover;
+    filter: blur(50px);
+    z-index: -1; }
+  .container_form img {
+    justify-content: center;
+    width: 50%; }
+  .container_form h2 {
+    position: relative;
+    padding: 0 0 10px;
+    margin-bottom: 10px; }
+    .container_form h2::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      height: 4px;
+      width: 50px;
+      border-radius: 2px;
+      background-color: #E63946; }
+
+.contact-box {
+  max-width: 850px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19); }
+
+.left {
+  background: url("../img/contacto.jpg") no-repeat center;
+  background-size: cover;
+  height: 100%; }
+
+.right {
+  padding: 25px 40px; }
+
+.field {
+  width: 100%;
+  border: 2px solid rgba(0, 0, 0, 0);
+  outline: none;
+  background-color: rgba(230, 230, 230, 0.6);
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 22px;
+  transition: .3s; }
+  .field:hover {
+    background-color: rgba(0, 0, 0, 0.1); }
+  .field:focus {
+    border: 2px solid rgba(30, 85, 250, 0.47);
+    background-color: #fff; }
+
+textarea {
+  min-height: 150px; }
+
+.btn {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #1F1F46;
+  color: #fff;
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: .3s; }
+  .btn:hover {
+    color: white;
+    background-color: #E63946; }
+
+/* FOOTER */
+footer {
+  width: 100%;
+  position: absolute;
+  background: #1F1F46;
+  color: #fff;
+  padding: 100px 0 30px;
+  font-size: 13px;
+  line-height: 20px; }
+  footer .container__footer {
+    width: 86%;
+    margin: auto; }
+    footer .container__footer .row {
+      width: 100%;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between; }
+  footer h3 {
+    margin-bottom: 10px;
+    position: relative;
+    font-size: 1rem; }
+  footer p {
+    padding: 0;
+    font-weight: lighter; }
+  footer .logo-footer {
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px; }
+
+/* NEWSLETTER FORM */
+.form_footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 50px; }
+  .form_footer .fa-solid {
+    font-size: 16px;
+    color: #E63946;
+    padding: 10px; }
+  .form_footer input {
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none; }
+  .form_footer button {
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer; }
+
+/* LINEA DECORATIVA */
+hr {
+  width: 85%;
+  border: 0;
+  border-bottom: 0.5px solid #ccc;
+  margin: 20px auto; }
+
+.underline {
+  width: 100%;
+  height: 5px;
+  background: #1F1F46;
+  border-radius: 3px;
+  position: absolute;
+  left: 0;
+  top: 25px;
+  overflow: hidden; }
+  .underline span {
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: movimiento 2s linear infinite; }
+
+/* COPY */
+.copy {
+  text-align: center; }
+
+.col {
+  flex-basis: 25%;
+  padding: 10px; }
+  .col:nth-child(2) {
+    flex-basis: content; }
+
+@keyframes movimiento {
+  0% {
+    left: -20px; }
+  100% {
+    left: 100%; } }
+
+/* RESPONSITIVE */
+@media only screen and (max-width: 992px) {
+  .d-flex {
+    justify-content: center; }
+  .navbar-nav {
+    display: grid;
+    justify-content: center; }
+  section {
+    padding-bottom: 15rem; }
+  .mouse {
+    bottom: 30%; }
+  .logo {
+    padding-bottom: 1rem; }
+  .social {
+    padding-top: 1.25rem; }
+  .explorar, .nosotros, .nft {
+    padding: 2rem; }
+  .container__text {
+    justify-content: center;
+    text-align: center; }
+  .info__texto p {
+    text-align: center;
+    padding: 1em; }
+  #titulo {
+    font-size: 5em; }
+  #btn {
+    font-size: 1em;
+    text-align: center; }
+  .explorar h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px; }
+  .nosotros h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px; }
+  .nft h3 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px;
+    text-align: center; }
+  .explorar, .nosotros, .nft p {
+    font-size: 1rem;
+    color: white; }
+  .portfolio {
+    flex-wrap: wrap; }
+  footer {
+    bottom: unset; }
+  .col {
+    flex-basis: 100%;
+    display: grid;
+    justify-content: center;
+    padding: 1.5rem; }
+  .col h3 {
+    text-align: center; }
+  .col p {
+    text-align: center;
+    padding-top: 0.5rem; }
+  .col:nth-child(2) {
+    flex-basis: 100%; }
+  .footer-sub-text {
+    text-align: center; }
+  .contact-box {
+    grid-template-columns: 1fr; }
+  .left {
+    height: 200px; } }
+
+@media only screen and (max-width: 576px) {
+  section {
+    padding-bottom: 15rem;
+    overflow: hidden;
+    /* Tuve que usarlo al tener la animación del scroll que van las imagenes hacia la derecha */ }
+  .mouse {
+    bottom: 20%; }
+  .logo {
+    padding-bottom: 1rem; }
+  .social {
+    padding-top: 1.25rem; }
+  .explorar, .nosotros, .nft {
+    padding: 2rem;
+    grid-template-columns: 1fr;
+    /* grid-template-rows: 19rem 1fr;  */ }
+  .container__text {
+    display: flex;
+    align-items: center; }
+  .container__tex p {
+    text-align: center;
+    padding: 1em; }
+  #titulo {
+    font-size: 3em; }
+  #btn {
+    font-size: 1em;
+    text-align: center; }
+  .explorar h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px; }
+  .nosotros h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px; }
+  .nft h3 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px;
+    text-align: center; }
+  .explorar, .nosotros, .nft p {
+    font-size: 1rem;
+    color: white; }
+  .portfolio {
+    flex-wrap: wrap; }
+  footer {
+    bottom: unset; }
+  .col {
+    flex-basis: 100%;
+    display: grid;
+    justify-content: center;
+    padding: 1.5rem; }
+  .col h3 {
+    text-align: center; }
+  .col p {
+    text-align: center;
+    padding-top: 0.5rem; }
+  .col:nth-child(2) {
+    flex-basis: 100%; }
+  .footer-sub-text {
+    text-align: center; }
+  .contact-box {
+    grid-template-columns: 1fr; }
+  .left {
+    height: 200px; } }

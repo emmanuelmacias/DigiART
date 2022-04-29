@@ -1,0 +1,247 @@
+/* RESPONSITIVE */
+
+@media only screen and (max-width: 992px) {
+
+    .d-flex{
+        justify-content: center;
+    }
+
+    .navbar-nav{
+        display: grid;
+        justify-content: center;
+    }
+
+    section{
+        padding-bottom: 15rem;
+    }
+
+    .mouse{
+        bottom: 30%;
+    }
+
+    .logo{
+        padding-bottom: 1rem;
+    }
+    
+    .social{
+        padding-top: 1.25rem;
+    }
+
+    .explorar, .nosotros, .nft{
+       padding: 2rem;
+      
+   }
+
+   .container__text { 
+        justify-content: center;
+        text-align: center; 
+
+    }
+
+    .info__texto p { 
+        text-align: center;
+        padding: 1em;  
+    
+        }
+
+    #titulo{
+        font-size: 5em;
+        
+    }
+
+    #btn{
+        font-size: 1em;
+        text-align: center;
+    }
+
+    .explorar h3{
+        text-align: center;
+        font-size: 2rem;
+        color: white;
+        margin-bottom: 10px;
+    }
+    
+    .nosotros h3{
+        text-align: center;
+        font-size: 2rem;
+        color: white;
+        margin-bottom: 10px;
+    }
+    
+    .nft h3{
+    
+        font-size: 2rem;
+        color: white;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    
+    .explorar, .nosotros, .nft p{
+    
+        font-size: 1rem;
+        color: white;
+    }
+    
+
+    .portfolio{
+        flex-wrap: wrap;
+    }
+
+    footer{ 
+        bottom: unset;
+    }
+
+    .col{
+        flex-basis: 100%;
+        display: grid;
+        justify-content: center;
+        padding: 1.5rem;
+      }
+
+    .col h3{
+        text-align: center;
+    }
+
+    .col p{
+        text-align: center;
+        padding-top: 0.5rem;
+    }
+    
+    .col:nth-child(2){
+        flex-basis: 100%;
+    }
+
+    .footer-sub-text{
+        text-align: center;
+    }
+
+    .contact-box{
+		grid-template-columns: 1fr;
+	}
+
+	.left{
+		height: 200px;
+	}
+
+}
+
+@media only screen and (max-width: 576px) {
+
+    section{
+        padding-bottom: 15rem;
+        overflow: hidden; /* Tuve que usarlo al tener la animación del scroll que van las imagenes hacia la derecha */
+    }
+
+    .mouse{
+        bottom: 20%;
+    }
+
+    .logo{
+        padding-bottom: 1rem;
+    }
+    
+    .social{
+        padding-top: 1.25rem;
+    }
+
+    .explorar, .nosotros, .nft{
+       padding: 2rem;
+       grid-template-columns: 1fr; 
+       /* grid-template-rows: 19rem 1fr;  */
+      
+   }
+
+   .container__text { 
+       display: flex;
+       align-items: center;  
+
+    }
+
+    .container__tex p { 
+        text-align: center;
+        padding: 1em;  
+    
+        }
+
+    #titulo{
+        font-size: 3em;
+        
+    }
+
+    #btn{
+        font-size: 1em;
+        text-align: center;
+    }
+
+    .explorar h3{
+        text-align: center;
+        font-size: 2rem;
+        color: white;
+        margin-bottom: 10px;
+    }
+    
+    .nosotros h3{
+        text-align: center;
+        font-size: 2rem;
+        color: white;
+        margin-bottom: 10px;
+    }
+    
+    .nft h3{
+    
+        font-size: 2rem;
+        color: white;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    
+    .explorar, .nosotros, .nft p{
+    
+        font-size: 1rem;
+        color: white;
+    }
+    
+
+    .portfolio{
+        flex-wrap: wrap;
+    }
+
+    footer{ 
+        bottom: unset;
+    }
+
+    .col{
+        flex-basis: 100%;
+        display: grid;
+        justify-content: center;
+        padding: 1.5rem;
+      }
+
+    .col h3{
+        text-align: center;
+    }
+
+    .col p{
+        text-align: center;
+        padding-top: 0.5rem;
+    }
+    
+    .col:nth-child(2){
+        flex-basis: 100%;
+    }
+
+    .footer-sub-text{
+        text-align: center;
+    }
+
+    .contact-box{
+		grid-template-columns: 1fr;
+	}
+
+	.left{
+		height: 200px;
+	}
+
+}

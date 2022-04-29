@@ -31,30 +31,6 @@ h1, h2, h3{
     font-weight: bold;
 }
 
-/* MENU NO INDEX */
-
-header, .navbar{
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 1.87rem 6.25rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center; 
-    z-index: 10000;
-    background-color: #1F1F46;
-}
-
-header .logo{
-    color: white;
-    font-weight: 700;
-    text-decoration: none;
-    font-size: 2em;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
 /* MENU BURGER */
 #menu_on{
 	display: inline-block;
@@ -85,6 +61,19 @@ bottom: 0;
 
 
 /* BARRA DE MENU */
+
+.navbar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.87rem 6.25rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    z-index: 10000;
+    background-color: #1F1F46;
+}
 
 .navbar-light .navbar-toggler{
     color: white;
@@ -350,7 +339,7 @@ section img#front{
 }
 
 
-  /* ICONO ANIMADO MOUSE */
+/* ICONO ANIMADO MOUSE */
 
 .mouse {
     display: block;
