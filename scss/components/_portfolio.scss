@@ -1,8 +1,10 @@
 /* PORTFOLIO */
 .portfolio{
     width: 100vw;
-    @include tipoDisplay (flex);
-    background: map-get($colores , gradient-p ); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $gradient;
     background-size: cover; 
     padding: 0.6rem;   
 }

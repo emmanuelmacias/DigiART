@@ -1,12 +1,14 @@
 /* CONTACTO */
 
 .container_form{
-	@include tipoDisplay (flex);
 	position: relative;
 	width: 100%;
 	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	padding: 50px;
-    background-color: map-get($colores , secundario ); 
+    background-color: $color-secundario;
     background-image: url(../img/mapa-barbuda-bn.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -44,7 +46,7 @@
 				height: 4px;
 				width: 50px;
 				border-radius: 2px;
-				background-color: map-get($colores , secundario ); 
+				background-color: $color-secundario;
 			}
 	}
 }
@@ -52,8 +54,10 @@
 
 .contact-box{
 	max-width: 850px;
-	@include tipoDisplay (grid);
+	display: grid;
 	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
 	text-align: center;
 	background-color: #fff;
 	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
@@ -97,7 +101,7 @@ textarea{
 .btn{
 	width: 100%;
 	padding: 0.5rem 1rem;
-	background-color: map-get($colores , principal ); 
+	background-color: $color-principal;
 	color: #fff;
 	font-size: 1.1rem;
 	border: none;
@@ -107,6 +111,6 @@ textarea{
 
 	&:hover{
 		color: white;
-		background-color: map-get($colores , secundario ); 
+		background-color: $color-secundario;
 	}
 }

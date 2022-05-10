@@ -1,33 +1,4 @@
 $color-principal: #1F1F46;
 $color-secundario: #E63946;
-$color-alternativo: #212E74;
+$gradient: linear-gradient(to right, #1F1F46, #212E74 );
 $size-social-icon: 20px;
-
-$colores: (
-    principal: #1F1F46,
-    secundario: #E63946,
-    gradient-p: linear-gradient(to right, $color-principal, $color-alternativo),
-    gradient-btn-1: linear-gradient(to right, $color-secundario, $color-alternativo ),
-    gradient-btn-2: linear-gradient(to right,$color-alternativo , $color-secundario ),
-    facebook: #3b5998,
-    instagram: #e1306c,
-    twitter: #00ACED
-);
-
-
-%btn-conocenos-after-before{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 10rem;
-};
-
-
-@mixin tipoDisplay ($display) {
-    display: $display;
-    justify-content: center;
-    align-items: center;
-};
-
