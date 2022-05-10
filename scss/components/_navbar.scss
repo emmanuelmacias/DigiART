@@ -10,7 +10,7 @@
     justify-content: space-around;
     align-items: center; 
     z-index: 10000;
-    background-color: $color-principal;
+    background-color: map-get($colores , principal ); 
 }
 
 .navbar-light .navbar-toggler{
@@ -22,7 +22,7 @@
     color: white;
 
     &:hover{
-        color: $color-secundario;
+        color: map-get($colores , secundario ); 
     }
 }
 
@@ -31,7 +31,7 @@
     color:white;
 
     &.active{
-        color: $color-secundario;
+        color: map-get($colores , secundario ); 
     }
 
     &:hover{
@@ -57,7 +57,7 @@
 
     &:hover{
         color: white;
-        background: $color-secundario;
+        background: map-get($colores , secundario ); 
         border-radius: 20px;
     }
 }
@@ -79,7 +79,7 @@
 
     &:hover{
         font-size: $size-social-icon;
-        color: #e1306c; 
+        color: map-get($colores , instagram );  
         text-decoration: none;
         transition: ease 0.5s;
     }
@@ -93,7 +93,7 @@
 
     &:hover{
         font-size: $size-social-icon;
-        color: #3b5998; 
+        color: map-get($colores , facebook ); 
         text-decoration: none;
         transition: ease 0.5s;
     }
@@ -106,7 +106,7 @@
     
     &:hover{
         font-size: 20px;
-        color: #00ACED; 
+        color: map-get($colores , twitter ); 
         text-decoration: none;
         transition: ease 0.5s;
     }
