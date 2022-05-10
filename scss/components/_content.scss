@@ -53,13 +53,25 @@
     z-index: 1;  
 
     &::after{
-        @extend %btn-conocenos-after-before;
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 10rem;
         background: map-get($colores , gradient-btn-1 ); 
         z-index: -2;
     }
 
     &::before{
-        @extend %btn-conocenos-after-before;
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 10rem;
         background: map-get($colores , gradient-btn-2 ); 
         transition: ease-out .3s;
         z-index: -1;

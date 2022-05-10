@@ -1,14 +1,5 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap");
-.button::after, .button::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10rem; }
-
 * {
   margin: 0;
   padding: 0;
@@ -141,13 +132,13 @@ h1, h2, h3 {
 
 /* IMAGEN PRINCIPAL CON BOTON A #explorar */
 section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
   width: 100%;
   height: 100vh;
-  padding: 100px; }
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   section::before {
     content: '';
     position: absolute;
@@ -265,11 +256,25 @@ section {
   text-align: center;
   z-index: 1; }
   .button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: linear-gradient(to right, #E63946, #212E74);
+    border-radius: 10rem;
     z-index: -2; }
   .button::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
     background: linear-gradient(to right, #212E74, #E63946);
     transition: ease-out .3s;
+    border-radius: 10rem;
     z-index: -1; }
   .button:hover::before {
     color: #fff;
@@ -279,8 +284,8 @@ section {
 .portfolio {
   width: 100vw;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   background: linear-gradient(to right, #1F1F46, #212E74);
   background-size: cover;
   padding: 0.6rem; }
@@ -333,12 +338,12 @@ section {
 
 /* CONTACTO */
 .container_form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 50px;
   background-color: #E63946;
   background-image: url(../img/mapa-barbuda-bn.png);
@@ -377,9 +382,9 @@ section {
 .contact-box {
   max-width: 850px;
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: center;
-  grid-template-columns: repeat(2, 1fr);
   text-align: center;
   background-color: #fff;
   box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19); }
