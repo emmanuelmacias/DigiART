@@ -376,7 +376,7 @@ section {
   box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19); }
 
 .left {
-  background: url("../../img/contacto.webp") no-repeat center;
+  background: url("../img/contacto.webp") no-repeat center;
   background-size: cover;
   height: 100%; }
 
