@@ -56,7 +56,7 @@ footer{
 
     .fa-solid{
         font-size: 16px;
-        color: $color-secundario;
+        color: map-get($colores , secundario);
         padding: 10px;
     }
 
@@ -87,7 +87,7 @@ hr{
 .underline{
     width: 100%;
     height: 5px;
-    background: $color-principal;
+    background: map-get($colores , principal);
     border-radius: 3px;
     position: absolute;
     left: 0;

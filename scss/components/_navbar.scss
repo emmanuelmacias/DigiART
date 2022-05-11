@@ -10,7 +10,7 @@
     justify-content: space-around;
     align-items: center; 
     z-index: 10000;
-    background-color: $color-principal;
+    background-color: map-get($colores , principal);
 }
 
 .navbar-light .navbar-toggler{
@@ -22,7 +22,7 @@
     color: white;
 
     &:hover{
-        color: $color-secundario;
+        color: map-get($colores , secundario);
     }
 }
 
@@ -31,7 +31,7 @@
     color:white;
 
     &.active{
-        color: $color-secundario;
+        color: map-get($colores , secundario);
     }
 
     &:hover{
@@ -57,7 +57,7 @@
 
     &:hover{
         color: white;
-        background: $color-secundario;
+        background: map-get($colores , secundario);
         border-radius: 20px;
     }
 }
@@ -66,49 +66,38 @@
 
 /* ICONOS REDES SOCIALES */
 .social{
-    font-size: $size-social-icon;
-    color: white; 
-    text-decoration: none;
+    @extend %social-icon-base;
     padding-left: 5px;
 }
 
 .social-icon-instagram{
-    font-size: $size-social-icon;
-    color: white; 
-    text-decoration: none;
+    @extend %social-icon-base;
 
     &:hover{
-        font-size: $size-social-icon;
-        color: #e1306c; 
-        text-decoration: none;
-        transition: ease 0.5s;
+        @extend %social-icon-focus;
+        color: map-get($colores , instagram); 
+        
     }
     
 }
 
 .social-icon-facebook{
-    font-size: $size-social-icon;
-    color: white; 
-    text-decoration: none;  
+    @extend %social-icon-base;
 
     &:hover{
-        font-size: $size-social-icon;
-        color: #3b5998; 
-        text-decoration: none;
-        transition: ease 0.5s;
+        @extend %social-icon-focus;
+        color: map-get($colores , facebook); 
+        
     }
 }
 
 .social-icon-twitter{
-    font-size: 20px;
-    color: white; 
-    text-decoration: none;  
+    @extend %social-icon-base;  
     
     &:hover{
-        font-size: 20px;
-        color: #00ACED; 
-        text-decoration: none;
-        transition: ease 0.5s;
+        @extend %social-icon-focus;
+        color: map-get($colores , twitter); 
+        
     }
 }
 

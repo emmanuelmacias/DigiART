@@ -1,5 +1,15 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap");
+.social, .social-icon-instagram, .social-icon-facebook, .social-icon-twitter {
+  font-size: 20px;
+  color: white;
+  text-decoration: none; }
+
+.social-icon-instagram:hover, .social-icon-facebook:hover, .social-icon-twitter:hover {
+  font-size: 20px;
+  text-decoration: none;
+  transition: ease 0.5s; }
+
 * {
   margin: 0;
   padding: 0;
@@ -72,40 +82,16 @@ h1, h2, h3 {
 
 /* ICONOS REDES SOCIALES */
 .social {
-  font-size: 20px;
-  color: white;
-  text-decoration: none;
   padding-left: 5px; }
 
-.social-icon-instagram {
-  font-size: 20px;
-  color: white;
-  text-decoration: none; }
-  .social-icon-instagram:hover {
-    font-size: 20px;
-    color: #e1306c;
-    text-decoration: none;
-    transition: ease 0.5s; }
+.social-icon-instagram:hover {
+  color: #e1306c; }
 
-.social-icon-facebook {
-  font-size: 20px;
-  color: white;
-  text-decoration: none; }
-  .social-icon-facebook:hover {
-    font-size: 20px;
-    color: #3b5998;
-    text-decoration: none;
-    transition: ease 0.5s; }
+.social-icon-facebook:hover {
+  color: #3b5998; }
 
-.social-icon-twitter {
-  font-size: 20px;
-  color: white;
-  text-decoration: none; }
-  .social-icon-twitter:hover {
-    font-size: 20px;
-    color: #00ACED;
-    text-decoration: none;
-    transition: ease 0.5s; }
+.social-icon-twitter:hover {
+  color: #00ACED; }
 
 /* MENU BURGER */
 #menu_on {
@@ -284,8 +270,8 @@ section {
 .portfolio {
   width: 100vw;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   background: linear-gradient(to right, #1F1F46, #212E74);
   background-size: cover;
   padding: 0.6rem; }
@@ -382,15 +368,15 @@ section {
 .contact-box {
   max-width: 850px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: center;
+  grid-template-columns: repeat(2, 1fr);
   text-align: center;
   background-color: #fff;
   box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19); }
 
 .left {
-  background: url("../img/contacto.jpg") no-repeat center;
+  background: url("../../img/contacto.webp") no-repeat center;
   background-size: cover;
   height: 100%; }
 
@@ -418,7 +404,7 @@ textarea {
 .btn {
   width: 100%;
   padding: 0.5rem 1rem;
-  background-color: #1F1F46;
+  background-color: #E63946;
   color: #fff;
   font-size: 1.1rem;
   border: none;
@@ -427,7 +413,10 @@ textarea {
   transition: .3s; }
   .btn:hover {
     color: white;
-    background-color: #E63946; }
+    background-color: #1F1F46; }
+
+textarea {
+  resize: none; }
 
 /* FOOTER */
 footer {
