@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap");
+@import 'https://fonts.googleapis.com/css?family=Inconsolata';
 .social, .social-icon-instagram, .social-icon-facebook, .social-icon-twitter {
   font-size: 20px;
   color: white;
@@ -36,6 +37,9 @@ h1, h2, h3 {
   font-weight: bold; }
 
 /* NAVBAR */
+/* .navbar-light .navbar-toggler-icon{
+    
+} */
 .navbar {
   position: sticky;
   top: 0;
@@ -332,21 +336,22 @@ section {
   align-items: center;
   padding: 50px;
   background-color: #E63946;
-  background-image: url(../img/mapa-barbuda-bn.png);
+  background-image: url(../img/mapa-barbuda.avif);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: left; }
-  .container_form::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: url(../img/mapa-barbuda.png) no-repeat center;
-    background-size: cover;
-    filter: blur(50px);
-    z-index: -1; }
+  background-position: left;
+  /* &::after{
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		background: url(../img/mapa-barbuda.avif) no-repeat center;
+		background-size: cover;
+		filter: blur(50px);
+		z-index: -1;
+	} */ }
   .container_form img {
     justify-content: center;
     width: 50%; }
@@ -516,6 +521,91 @@ hr {
     left: -20px; }
   100% {
     left: 100%; } }
+
+html {
+  min-height: 100%; }
+
+.background-404 {
+  box-sizing: border-box;
+  height: 100%;
+  background-color: #000000;
+  background-image: radial-gradient(#111358, #041607), url("https://media.giphy.com/media/oEI9uBYSzLpBK/giphy.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Inconsolata', Helvetica, sans-serif;
+  font-size: 1.5rem;
+  color: #E63946;
+  text-shadow: 0 0 1ex #3d33ff, 0 0 2px rgba(255, 255, 255, 0.8); }
+
+.noise {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://media.giphy.com/media/oEI9uBYSzLpBK/giphy.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  opacity: .02; }
+
+.overlay {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(180deg, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 100%);
+  background-size: auto 4px;
+  z-index: 1; }
+
+.overlay::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(0deg, transparent 0%, rgba(33, 46, 116, 0.2) 2%, rgba(33, 46, 116, 0.8) 3%, rgba(33, 46, 116, 0.2) 3%, transparent 100%);
+  background-repeat: no-repeat;
+  animation: scan 7.5s linear 0s infinite; }
+
+@keyframes scan {
+  0% {
+    background-position: 0 -100vh; }
+  35%, 100% {
+    background-position: 0 100vh; } }
+
+.terminal {
+  box-sizing: inherit;
+  position: absolute;
+  height: 100%;
+  width: 1000px;
+  max-width: 100%;
+  padding: 4rem;
+  text-transform: uppercase; }
+
+.output {
+  color: #808dff;
+  text-shadow: 0 0 1px rgba(128, 141, 255, 0.41), 0 0 2px rgba(255, 255, 255, 0.8); }
+
+.output::before {
+  content: "> "; }
+
+.link404 {
+  color: #fff;
+  text-decoration: none; }
+
+.link404::before {
+  content: "["; }
+
+.link404::after {
+  content: "]"; }
+
+.errorcode {
+  color: white; }
 
 /* RESPONSITIVE */
 @media only screen and (max-width: 992px) {

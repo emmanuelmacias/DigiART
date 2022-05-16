@@ -1,3 +1,6 @@
+
+/* BACKGROUND PARALLAX Tipo Disney, QUEPD */
+
 let estrellas = document.getElementById('estrellas');
 let luna = document.getElementById('luna');
 let nubes = document.getElementById('nubes');
@@ -12,6 +15,4 @@ window.addEventListener('scroll', function(){
     luna.style.top = value * 0.8 + 'px';
     nubes.style.top = value * 0.3 + 'px';
 
-
-    
 }) 
