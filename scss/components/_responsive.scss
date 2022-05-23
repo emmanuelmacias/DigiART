@@ -245,3 +245,9 @@
 	}
 
 }
+
+@media only screen and (max-width: 337px) {
+    .navbar .container-fluid{
+        justify-content: center;
+    }
+}

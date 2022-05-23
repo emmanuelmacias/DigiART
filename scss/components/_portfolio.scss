@@ -18,10 +18,10 @@
   box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
   font-family: roboto;
   text-align: justify;
-  cursor: pointer;
   margin: 30px;
   transform-style: preserve-3d;
   transform: perspective(1000px);
+  min-width:auto;
 }
 
 .js-tilt-glare {

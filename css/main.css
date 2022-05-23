@@ -40,6 +40,13 @@ h1, h2, h3 {
 /* .navbar-light .navbar-toggler-icon{
     
 } */
+.navbar-brand {
+  margin-right: 0; }
+
+/* .navbar .container-fluid{
+    justify-content: center;
+}
+ */
 .navbar {
   position: sticky;
   top: 0;
@@ -47,7 +54,7 @@ h1, h2, h3 {
   width: 100%;
   padding: 1.87rem 6.25rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   z-index: 10000;
   background-color: #1F1F46; }
@@ -96,29 +103,6 @@ h1, h2, h3 {
 
 .social-icon-twitter:hover {
   color: #00ACED; }
-
-/* MENU BURGER */
-#menu_on {
-  display: inline-block;
-  width: 30px;
-  height: 20px;
-  position: relative;
-  z-index: 2; }
-  #menu_on span:nth-child(2) {
-    top: calc(50% - 2px); }
-  #menu_on span:nth-child(3) {
-    bottom: 0; }
-
-#menu_on span {
-  width: 100%;
-  height: 3px;
-  border-radius: 4px;
-  display: block;
-  position: absolute;
-  background: #fff;
-  transition: all 0.25s ease;
-  /* Propiedades a animar | Tiempo | Tipo animación*/
-  transform-origin: 0px 100%; }
 
 /* IMAGEN PRINCIPAL CON BOTON A #explorar */
 section {
@@ -291,10 +275,10 @@ section {
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
   font-family: roboto;
   text-align: justify;
-  cursor: pointer;
   margin: 30px;
   transform-style: preserve-3d;
-  transform: perspective(1000px); }
+  transform: perspective(1000px);
+  min-width: auto; }
 
 .js-tilt-glare {
   border-radius: 18px; }
@@ -742,3 +726,7 @@ html {
     grid-template-columns: 1fr; }
   .left {
     height: 200px; } }
+
+@media only screen and (max-width: 337px) {
+  .navbar .container-fluid {
+    justify-content: center; } }

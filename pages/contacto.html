@@ -70,11 +70,14 @@
                     <div class="left"><!-- <img src="../img/logo-red-2.png" alt=""> --></div>
                     <div class="right">
                         <h2>Contactanos</h2>
-                        <input type="text" class="field" placeholder="Nombre">
-                        <input type="text" class="field" placeholder="Email">
-                        <input type="text" class="field" placeholder="Teléfono">
-                        <textarea class="field" placeholder="Mensaje"></textarea>
-                        <button class="btn" aria-label="Enviar Email">Enviar</button>
+                        <form action="../enviar.php" method="post">
+                        <input type="text" class="field" name="nombre" placeholder="Nombre" required>
+                        <input type="text" class="field" name="email" placeholder="Email" required>
+                        <input type="number" class="field" name="telefono" placeholder="Teléfono">
+                        <textarea class="field" name="mensaje" placeholder="Mensaje" required></textarea>
+                       
+                        <input type="submit" class="btn" aria-label="Enviar Email" value="Enviar"></input>
+                      </form>
                     </div>
                 </div>
             </div>
@@ -92,7 +95,7 @@
                 </div>
                 
                 <div class="col col-lg-4 col-md-4 col-sm-12">
-                    <a href="#" class="logo-footer"><img src="../img/logo-red.png" alt="logo-nft-footer" width="70" height="70"></a>
+                    <a href="../index.html" class="logo-footer"><img src="../img/logo-red.png" alt="logo-nft-footer" width="70" height="70"></a>
                 </div>
                 
                 <div class="col col-lg-4 col-md-4 col-sm-12">
