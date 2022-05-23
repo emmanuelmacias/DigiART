@@ -1,38 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
 @import './base/variables';
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif; 
-    scroll-behavior: smooth;
-    animation-delay: 2s;
-}
-
-body{
-    min-height: 100vh;
-    overflow-x: hidden;
-} 
-
-a{
-    text-decoration: none;
-    color: map-get($colores , secundario);
-}
-
-a:hover{
-    color: white;    
-}
-
-p{
-    padding-bottom: 1rem;
-}
-
-h1, h2, h3{
-    font-weight: bold;
-}
-
-
+@import './components/init';
 @import './components/navbar';
 @import './components/section';
 @import './components/content';
